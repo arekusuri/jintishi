@@ -1,5 +1,5 @@
 {
-  "name": "jintishi",
+  "name": "pingshuiyun",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,5 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://arekusuri.github.io/jintishi/"
+  "homepage": "https://arekusuri.github.io/pingshuiyun/"
 }
