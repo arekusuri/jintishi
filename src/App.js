@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import TextFileDisplay from './TextFileDisplay';
 import Home from './Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -17,12 +16,6 @@ const Menu = () => {
 }
 
 function App() {
-  const [showComponent, setShowComponent] = useState(false);
-
-  const handleClick = () => {
-    setShowComponent(!showComponent);
-  };
-
   return (
     <div className="App">
       <Router>
