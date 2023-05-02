@@ -1,15 +1,15 @@
 {
-  "files": {
-    "main.css": "/pingshuiyun/static/css/main.1cefbe28.css",
-    "main.js": "/pingshuiyun/static/js/main.d81d1052.js",
-    "static/js/787.f5049d08.chunk.js": "/pingshuiyun/static/js/787.f5049d08.chunk.js",
-    "index.html": "/pingshuiyun/index.html",
-    "main.1cefbe28.css.map": "/pingshuiyun/static/css/main.1cefbe28.css.map",
-    "main.d81d1052.js.map": "/pingshuiyun/static/js/main.d81d1052.js.map",
-    "787.f5049d08.chunk.js.map": "/pingshuiyun/static/js/787.f5049d08.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.1cefbe28.css",
-    "static/js/main.d81d1052.js"
-  ]
+  "main.css": "/pingshuiyun/static/css/main.fa9b7494.chunk.css",
+  "main.js": "/pingshuiyun/static/js/main.90db5455.chunk.js",
+  "main.js.map": "/pingshuiyun/static/js/main.90db5455.chunk.js.map",
+  "static/js/1.7fc5741d.chunk.js": "/pingshuiyun/static/js/1.7fc5741d.chunk.js",
+  "static/js/1.7fc5741d.chunk.js.map": "/pingshuiyun/static/js/1.7fc5741d.chunk.js.map",
+  "static/js/2.9b3aa60e.chunk.js": "/pingshuiyun/static/js/2.9b3aa60e.chunk.js",
+  "static/js/2.9b3aa60e.chunk.js.map": "/pingshuiyun/static/js/2.9b3aa60e.chunk.js.map",
+  "runtime~main.js": "/pingshuiyun/static/js/runtime~main.ec134f47.js",
+  "runtime~main.js.map": "/pingshuiyun/static/js/runtime~main.ec134f47.js.map",
+  "static/css/main.fa9b7494.chunk.css.map": "/pingshuiyun/static/css/main.fa9b7494.chunk.css.map",
+  "index.html": "/pingshuiyun/index.html",
+  "precache-manifest.37e559183c8c087f5a62bc8bbd818fd0.js": "/pingshuiyun/precache-manifest.37e559183c8c087f5a62bc8bbd818fd0.js",
+  "service-worker.js": "/pingshuiyun/service-worker.js"
 }
