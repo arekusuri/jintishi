@@ -2,7 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import TextFileDisplay from './TextFileDisplay';
+import Home from './Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
+const Menu = () => {
+  return (
+    <ul>
+      <li> <NavLink to="/" activeClassName="active">Home</NavLink> </li>
+      <li> <NavLink to="/categories" activeClassName="active">四声</NavLink> </li>
+      <li> <NavLink to="/characters" activeClassName="active">平水韵表</NavLink> </li>
+    </ul>
+  );  
+}
 
 function App() {
   const [showComponent, setShowComponent] = useState(false);
@@ -13,31 +25,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-		i am here
-        </p>
-        <a className="App-link"
-          href="data/categories.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          see categoreis
-        </a>
-        <a className="App-link"
-          href="data/characters.txt"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          see characters
-        </a>
-
-	<button onClick={handleClick}>
-        {showComponent ? 'Hide Component' : 'Show Component'}
-	</button>
-        {showComponent && <TextFileDisplay />}
-      </header>
+      <Router>
+        <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/categories" element={<TextFileDisplay filename="categories.txt"/>} />
+          <Route path="/characters" element={<TextFileDisplay filename="characters.txt"/>} />
+        </Routes> 
+      </Router>
     </div>
   );
 }

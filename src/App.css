@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+.left-aligned {
+  text-align: left; 
+}
+.half-width {
+  width: 50%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #333;
+  overflow: hidden; 
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+li a:hover {
+  background: #666;
 }

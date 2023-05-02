@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const TextFileDisplay = () => {
+const TextFileDisplay = ({ filename }) => {
   const [fileContent, setFileContent] = useState('');
 
   useEffect(() => {
     const fetchFile = async () => {
       try {
-        const response = await fetch('/data/categories.txt');
+        const response = await fetch(`/data/${filename}`);
         const text = await response.text();
         setFileContent(text);
       } catch (error) {
@@ -14,11 +14,12 @@ const TextFileDisplay = () => {
       }
     };
     fetchFile();
-  }, []);
+  }, [filename]);
 
   return (
-    <div>
-      <pre>{fileContent}</pre>
+    
+    <div className="half-width">
+      <pre className="half-width left-aligned">{fileContent}</pre>
     </div>
   );
 };

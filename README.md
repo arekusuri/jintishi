@@ -70,6 +70,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 # Authentication issue when push?
-pingshuiyun git:(main) eval "$(ssh-agent -s)"
-pingshuiyun git:(main) ssh-add ~/.ssh/id_rsa
+```
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+```
 
