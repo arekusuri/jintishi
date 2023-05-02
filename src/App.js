@@ -9,10 +9,10 @@ import { NavLink } from 'react-router-dom';
 const Menu = () => {
   return (
     <ul>
-      <li> <NavLink to="/" activeClassName="active">Home</NavLink> </li>
-      <li> <NavLink to="/verify" activeClassName="active">查询</NavLink> </li>
-      <li> <NavLink to="/categories" activeClassName="active">四声</NavLink> </li>
-      <li> <NavLink to="/characters" activeClassName="active">平水韵表</NavLink> </li>
+      <li> <NavLink to="/pingshuiyun" activeClassName="active">Home</NavLink> </li>
+      <li> <NavLink to="/pingshuiyun/verify" activeClassName="active">查询</NavLink> </li>
+      <li> <NavLink to="/pingshuiyun/categories" activeClassName="active">四声</NavLink> </li>
+      <li> <NavLink to="/pingshuiyun/characters" activeClassName="active">平水韵表</NavLink> </li>
     </ul>
   );  
 }
@@ -23,10 +23,10 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/verify" element={<VerifyPoem />} />
-          <Route path="/categories" element={<TextFileDisplay filename="categories.txt"/>} />
-          <Route path="/characters" element={<TextFileDisplay filename="characters.txt"/>} />
+          <Route path="/pingshuiyun" element={<Home />} />
+          <Route path="/pingshuiyun/verify" element={<VerifyPoem />} />
+          <Route path="/pingshuiyun/categories" element={<TextFileDisplay filename="categories.txt"/>} />
+          <Route path="/pingshuiyun/characters" element={<TextFileDisplay filename="characters.txt"/>} />
         </Routes> 
       </Router>
     </div>
