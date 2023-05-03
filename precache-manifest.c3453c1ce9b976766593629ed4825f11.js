@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "893e6b89662c0ae9590d",
+    "revision": "e0d0c52702bc204c410c",
     "url": "/pingshuiyun/static/css/main.fa9b7494.chunk.css"
   },
   {
-    "revision": "893e6b89662c0ae9590d",
-    "url": "/pingshuiyun/static/js/main.893e6b89.chunk.js"
+    "revision": "e0d0c52702bc204c410c",
+    "url": "/pingshuiyun/static/js/main.e0d0c527.chunk.js"
   },
   {
     "revision": "7fc5741dfb5d402e95fa",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/pingshuiyun/static/js/runtime~main.ec134f47.js"
   },
   {
-    "revision": "17072162b3309c7c5e1a8d12834d7cfd",
+    "revision": "75c0f0d3c4f0c6f1911b12d9d2cea9c1",
     "url": "/pingshuiyun/index.html"
   }
 ];

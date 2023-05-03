@@ -1,7 +1,7 @@
 {
   "main.css": "/pingshuiyun/static/css/main.fa9b7494.chunk.css",
-  "main.js": "/pingshuiyun/static/js/main.893e6b89.chunk.js",
-  "main.js.map": "/pingshuiyun/static/js/main.893e6b89.chunk.js.map",
+  "main.js": "/pingshuiyun/static/js/main.e0d0c527.chunk.js",
+  "main.js.map": "/pingshuiyun/static/js/main.e0d0c527.chunk.js.map",
   "static/js/1.7fc5741d.chunk.js": "/pingshuiyun/static/js/1.7fc5741d.chunk.js",
   "static/js/1.7fc5741d.chunk.js.map": "/pingshuiyun/static/js/1.7fc5741d.chunk.js.map",
   "static/js/2.a2ce9277.chunk.js": "/pingshuiyun/static/js/2.a2ce9277.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/pingshuiyun/static/js/runtime~main.ec134f47.js.map",
   "static/css/main.fa9b7494.chunk.css.map": "/pingshuiyun/static/css/main.fa9b7494.chunk.css.map",
   "index.html": "/pingshuiyun/index.html",
-  "precache-manifest.d758961a6bcf5e4c353da8a18225c8c4.js": "/pingshuiyun/precache-manifest.d758961a6bcf5e4c353da8a18225c8c4.js",
+  "precache-manifest.c3453c1ce9b976766593629ed4825f11.js": "/pingshuiyun/precache-manifest.c3453c1ce9b976766593629ed4825f11.js",
   "service-worker.js": "/pingshuiyun/service-worker.js"
 }
