@@ -3,17 +3,16 @@ import React from 'react';
 import TextFileDisplay from './TextFileDisplay';
 import Home from './Home';
 import VerifyPoem from './VerifyPoem';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 const Menu = () => {
-  const pathname = process.env.REACT_APP_PATHNAME || '';
   return (
     <ul>
-      <li> <NavLink to={`${pathname}/`}>Home</NavLink> </li>
-      <li> <NavLink to={`${pathname}/verify`}>查询</NavLink> </li>  
-      <li> <NavLink to={`${pathname}/categories`}>四声</NavLink> </li>  
-      <li> <NavLink to={`${pathname}/characters`}>平水韵表</NavLink> </li>
+      <li> <NavLink to="/">Home</NavLink> </li>
+      <li> <NavLink to="/verify">查询</NavLink> </li>  
+      <li> <NavLink to="/categories">四声</NavLink> </li>  
+      <li> <NavLink to="/characters">平水韵表</NavLink> </li>
     </ul>
   );  
 }
@@ -26,10 +25,10 @@ function App() {
       <Router>
         <Menu />
         <Routes>
-          <Route path={`${pathname}/`} element={<Home />} />
-          <Route path={`${pathname}/verify`} element={<VerifyPoem />} />
-          <Route path={`${pathname}/categories`} element={<TextFileDisplay filename="categories.txt" pathname={pathname} />} />
-          <Route path={`${pathname}/characters`} element={<TextFileDisplay filename="characters.txt" pathname={pathname} />} />
+          <Route path="*" element={<Home />} />
+          <Route path="/verify" element={<VerifyPoem />} />
+          <Route path="/categories" element={<TextFileDisplay filename="categories.txt" pathname={pathname} />} />
+          <Route path="/characters" element={<TextFileDisplay filename="characters.txt" pathname={pathname} />} />
         </Routes> 
       </Router>
     </div>

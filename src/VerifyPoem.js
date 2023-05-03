@@ -14,9 +14,11 @@ function App() {
       style={{
         width: '500px',
         height: '400px',
-        border: '1px solid black'
+        border: '1px solid black',
+        fontSize: '22px',
       }}
       />
+      <br></br>
       <button onClick={handleSubmit}>Submit</button>
     </div>
   );
