@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-const TextFileDisplay = ({ filename }) => {
+const TextFileDisplay = ({ pathname, filename }) => {
   const [fileContent, setFileContent] = useState('');
 
   useEffect(() => {
     const fetchFile = async () => {
       try {
-        const response = await fetch(`/data/${filename}`);
+        const response = await fetch(`${pathname}/data/${filename}`);
         const text = await response.text();
         setFileContent(text);
       } catch (error) {

@@ -25,8 +25,14 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Set Environment Variable  
+      run: |
+        echo REACT_APP_PATHNAME=/pingshuiyun >> $GITHUB_ENV 
+    - name: Echo Environment Variable
+      run: echo $REACT_APP_PATHNAME
     - run: npm ci
     - run: npm run build
+    - run: cp 404.html build 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
       uses: peaceiris/actions-gh-pages@v3
