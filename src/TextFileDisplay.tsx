@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const TextFileDisplay = ({ pathname, filename }) => {
+type TextFileDisplayProps = {
+  pathname: string;
+  filename: string;
+};
+
+const TextFileDisplay: React.FC<TextFileDisplayProps> = ({ pathname, filename }) => {
   const [fileContent, setFileContent] = useState('');
 
   useEffect(() => {
