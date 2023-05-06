@@ -5,6 +5,7 @@ import Home from './Home';
 import VerifyPoem from './VerifyPoem';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { Characters } from './parse-file';
 
 const Menu = () => {
   return (
@@ -17,16 +18,16 @@ const Menu = () => {
   );  
 }
 
-
 function App() {
   const pathname = process.env.REACT_APP_PATHNAME ? process.env.REACT_APP_PATHNAME : '';
+  let characters = new Characters(pathname);
   return (
     <div className="App">
       <Router>
         <Menu />
         <Routes>
           <Route path="*" element={<Home />} />
-          <Route path="/verify" element={<VerifyPoem pathname={pathname}/>} />
+          <Route path="/verify" element={<VerifyPoem characters={characters}/>} />
           <Route path="/categories" element={<TextFileDisplay filename="categories.txt" pathname={pathname} />} />
           <Route path="/characters" element={<TextFileDisplay filename="characters.txt" pathname={pathname} />} />
         </Routes> 

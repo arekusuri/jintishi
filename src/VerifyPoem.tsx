@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-// import { Character } from './character/parse-file';
+import { Characters } from './parse-file';
 
 
 type VerifyPoemProps = {
-  pathname: string;
+  characters: Characters;
 };
 
-const VerifyPoem: React.FC<VerifyPoemProps> = ({ pathname }) => {
+
+const VerifyPoem: React.FC<VerifyPoemProps> = ({ characters }) => {
   const [text, setText] = useState('');
   
   async function handleSubmit() {
-    console.log(text);
-    const response = await fetch(`${pathname}/data/characters.txt`);
-    const txt = await response.text();
-    // const a = new Character(txt).parse();
-    // console.log(a)
+    const a = characters.parse();
+    console.log(a)
   }
   
   return (
