@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-// import { Character } from './character/parse-file';
+import { Character } from './character/parse-file';
 
 
 type VerifyPoemProps = {
@@ -15,7 +15,7 @@ const VerifyPoem: React.FC<VerifyPoemProps> = ({ pathname }) => {
     console.log(text);
     const response = await fetch(`${pathname}/data/characters.txt`);
     const txt = await response.text();
-    // const a = new Character(txt).parse();
+    const a = new Character(txt).parse();
     // console.log(a)
   }
   

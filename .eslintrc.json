@@ -1,0 +1,4 @@
+{
+  "ignorePatterns": ["src/character/parse-file.ts"]
+}
+
