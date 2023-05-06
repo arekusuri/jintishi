@@ -26,7 +26,7 @@ function App() {
         <Menu />
         <Routes>
           <Route path="*" element={<Home />} />
-          <Route path="/verify" element={<VerifyPoem />} />
+          <Route path="/verify" element={<VerifyPoem pathname={pathname}/>} />
           <Route path="/categories" element={<TextFileDisplay filename="categories.txt" pathname={pathname} />} />
           <Route path="/characters" element={<TextFileDisplay filename="characters.txt" pathname={pathname} />} />
         </Routes> 

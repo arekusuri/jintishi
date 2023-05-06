@@ -23,8 +23,8 @@ const TextFileDisplay: React.FC<TextFileDisplayProps> = ({ pathname, filename })
 
   return (
     
-    <div className="half-width">
-      <pre className="half-width left-aligned">{fileContent}</pre>
+    <div className="">
+      <pre className="pre-wrap left-aligned">{fileContent}</pre>
     </div>
   );
 };
