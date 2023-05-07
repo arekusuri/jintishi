@@ -1,30 +1,30 @@
 self.__precacheManifest = [
   {
-    "revision": "f094b81a10ed9a60f736",
+    "revision": "ff7ab14ac96fe9f542d5",
     "url": "/pingshuiyun/static/css/main.832fcf78.chunk.css"
   },
   {
-    "revision": "f094b81a10ed9a60f736",
-    "url": "/pingshuiyun/static/js/main.f094b81a.chunk.js"
+    "revision": "ff7ab14ac96fe9f542d5",
+    "url": "/pingshuiyun/static/js/main.ff7ab14a.chunk.js"
   },
   {
     "revision": "f881440d46e811047be5",
     "url": "/pingshuiyun/static/js/1.f881440d.chunk.js"
   },
   {
-    "revision": "2ebd72966b3401fff3b6",
+    "revision": "1142358e1ceb9bd7a257",
     "url": "/pingshuiyun/static/css/2.f6d8de31.chunk.css"
   },
   {
-    "revision": "2ebd72966b3401fff3b6",
-    "url": "/pingshuiyun/static/js/2.2ebd7296.chunk.js"
+    "revision": "1142358e1ceb9bd7a257",
+    "url": "/pingshuiyun/static/js/2.1142358e.chunk.js"
   },
   {
     "revision": "95d53d4a652abbd84e57",
     "url": "/pingshuiyun/static/js/runtime~main.95d53d4a.js"
   },
   {
-    "revision": "52ccebdddf9b73db9286f0cc24dd9e8e",
+    "revision": "df00942ce1e5a1afcc3bb57ff4417544",
     "url": "/pingshuiyun/index.html"
   }
 ];
