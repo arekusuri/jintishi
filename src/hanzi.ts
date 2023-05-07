@@ -1,13 +1,10 @@
 class Hanzi {
-    public zi: string;
-    public is_ping: boolean;
-    public sisheng: string;
-    public category: string;
-    constructor(zi: string, is_ping: boolean, sisheng: string, category: string) {
-        this.zi = zi;
-        this.is_ping = is_ping;
-        this.sisheng = sisheng
-        this.category = category;
+    public sisheng: number = 0;
+    public category: Array<string> = [];
+
+    add(sisheng: number, category: string) {
+        this.sisheng |= sisheng; // 按位或
+        this.category.push(category);
     }
 }
 
