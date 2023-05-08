@@ -63,6 +63,7 @@ const VerifyPoem: React.FC<VerifyPoemProps> = ({ hanzi_table }) => {
               value={text} onChange={(e) => setText(e.target.value)}
               rows={4}>
             </textarea>
+            <br></br>
             <div className="text-start">
               <Button variant="primary" onClick={handleSubmit}>查验平仄</Button>
             </div>
