@@ -27,7 +27,7 @@ class HanziTable {
     }
 
     getOrCreate (record: any, key: string, initialValue: any) {
-      record[key] = record[key] || new initialValue;
+      record[key] = record[key] || new initialValue(key);
       return record[key];
     }
 

@@ -4,6 +4,7 @@ import { HanziTable } from './hanzi-table';
 import { Hanzi } from './hanzi'
 import React, { useState, useEffect, useRef } from 'react';
 
+
 type VerifyPoemProps = {
   hanzi_table: HanziTable;
 };
@@ -50,11 +51,11 @@ const rhyme = (hanzi_table: HanziTable, line: string): string => {
   return "[" + hanzi.category.join(",") + "]"
 }
 
-
-
+// component
 const VerifyPoem: React.FC<VerifyPoemProps> = ({ hanzi_table }) => {
   const [text, setText] = useState('');
   const [preText, setPreText] = useState('');
+  const [output, setOutput] = useState<Hanzi[][]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
@@ -74,20 +75,107 @@ const VerifyPoem: React.FC<VerifyPoemProps> = ({ hanzi_table }) => {
       textareaRef.current.select();
     }
   };
+  const process_text = (text: string[], hanzi_table: HanziTable) => {
+    let text_result: Hanzi[][] = [];
+    text_result = text.map((line: string) =>  {
+      const line_result: Hanzi[] = line.split("").map((char) => {
+        if (punctuations.includes(char)) {
+          return new Hanzi(char);
+        }
+        return hanzi_table.table[char];
+      });
+      return line_result;
+    });
+    setOutput(text_result);
+  };
+
+  
+  const handleCharMouseOver = (hanzi: Hanzi, event: React.MouseEvent) => {
+    const topDiv = document.getElementById(event.currentTarget.id);
+    if (topDiv) {
+      topDiv.style.border = '2px solid green';
+      const span = topDiv.querySelector('span');
+      if (span) {
+        span.style.color = 'red';
+      }
+    }
+  };
+
+  const handleCharMouseOut = (hanzi: Hanzi, event: React.MouseEvent) => {
+    const topDiv = document.getElementById(event.currentTarget.id);
+    if (topDiv) {
+      topDiv.style.border = '2px solid transparent';
+      const span = topDiv.querySelector('span');
+      if (span) {
+        span.style.color = 'gray';
+      }
+    }
+  };
+
+  const renderOutput = () => {
+    return output.map((hanzi_array, row_index) => {
+      return renderOneLine(hanzi_array, row_index)
+    })
+  }
+
+  const renderOneLine = (hanzi_array: Hanzi[], row_index: number) => {
+    return (
+      <div key={`line-key-${row_index}`} style={{ display: 'flex' }}>
+        {hanzi_array.map((hanzi, col_index) => (
+          <div
+            key={`hanzi-key-${row_index}-${col_index}`}
+            style={{ margin: '0px' }}
+          >
+            <div
+              id={`char-id-${row_index}-${col_index}`}
+              key={`char-key-${row_index}-${col_index}`}
+              className="top-div"
+              onMouseOver={(event) => handleCharMouseOver(hanzi, event)}
+              onMouseOut={(event) => handleCharMouseOut(hanzi, event)}
+              style={{
+                backgroundColor: '',
+                padding: '0px',
+                border: '2px solid transparent',
+              }}
+              data-tip={hanzi.kanji}
+              >
+              <span
+                style={{
+                  margin: '0px',
+                  color: 'gray',
+                  position: 'relative',
+                  display: 'inline-block',
+                  padding: '0px',
+                  // border: '2px solid transparent',
+                }}
+              >
+                {hanzi.kanji}
+              </span>
+            </div>
+            <div className="bottom-div"
+              id={`pz-id-${row_index}-${col_index}`}
+              key={`pz-key-${row_index}-${col_index}`}
+            >
+              <span
+                style={{
+                  margin: '0px',
+                  color: 'blue',
+                  display: 'inline-block',
+                }}
+              >
+                {hanzi.pingzhe()}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
   
   async function handleSubmit() {
     const arr = text.split(/\n/);
     const line_list: Array<string> = []
-    for (var line of arr) {
-      const line_result: Array<string> = [];
-      for (var char of line.split("")) {
-        line_result.push(pingzhe(hanzi_table, char));
-      }
-      const result: string = line_result.join("")
-      const yun = rhyme(hanzi_table, line)
-      line_list.push(line + yun + "\n" + result);
-    }
-    setPreText(line_list.join("\n"));
+    process_text(arr, hanzi_table);
   }
 
   return (
@@ -116,7 +204,7 @@ const VerifyPoem: React.FC<VerifyPoemProps> = ({ hanzi_table }) => {
             </div>
              <br></br>
             <div className="col-sm fs-3 text-start">
-              <pre id="output">{preText}</pre>
+              <div>{renderOutput()}</div>
             </div> 
           </div>
           <div className="col-sm">
